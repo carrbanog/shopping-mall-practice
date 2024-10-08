@@ -125,13 +125,13 @@
 }
 
 .header .last_header .nav{
-  margin-top: 15px;
-  /* display: flex;
-  align-items: center; */
+  display: flex;
+  align-items: center;
 }
 
 .header .last_header .nav ul{
   display: flex; 
+  justify-content: space-around;
 }
 
 .header .last_header .nav ul li{

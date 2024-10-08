@@ -10,6 +10,11 @@ import product9 from "../../image/p9.jpg";
 import product10 from "../../image/p10.jpg";
 import product11 from "../../image/p11.jpg";
 import product12 from "../../image/p12.jpg";
+import product13 from "../../image/f1.jpg"
+import product14 from "../../image/f2.jpg"
+import product15 from "../../image/f3.jpg"
+import product16 from "../../image/f4.jpg"
+
 
 
 const Homeproduct =
@@ -21,6 +26,7 @@ const Homeproduct =
         image: product1,
         cat: 'tv',
         type: 'new',
+        taste: "electronic devices"
     },
     {
         id: 2,
@@ -28,7 +34,8 @@ const Homeproduct =
         price: '96',
         image: product2,
         cat: 'laptop',
-        type: 'new',
+        type: 'featured',
+        taste: "electronic devices"
     },
     {
         id: 3,
@@ -36,7 +43,8 @@ const Homeproduct =
         price: '236',
         image: product3,
         cat: 'watch',
-        type: 'new',
+        type: 'top',
+        taste: "electronic devices"
     },
     {
         id: 4,
@@ -45,6 +53,7 @@ const Homeproduct =
         image: product4,
         cat: 'laptop',
         type: 'new',
+        taste: "electronic devices"
     },
     {
         id: 5,
@@ -53,6 +62,7 @@ const Homeproduct =
         image: product5,
         cat: 'speaker',
         type: 'featured',
+        taste: "electronic devices"
     },
     {
         id: 6,
@@ -61,6 +71,7 @@ const Homeproduct =
         image: product6,
         cat: 'electronics',
         type: 'featured',
+        taste: "electronic devices"
     },
     {
         id: 7,
@@ -68,7 +79,8 @@ const Homeproduct =
         price: '956',
         image: product7,
         cat: 'headphone',
-        type: 'featured',
+        type: 'new',
+        taste: "electronic devices"
     },
     {
         id: 8,
@@ -76,7 +88,8 @@ const Homeproduct =
         price: '389',
         image: product8,
         cat: 'electronics',
-        type: 'featured',
+        type: 'top',
+        taste: "electronic devices"
     },
     {
         id: 9,
@@ -85,6 +98,7 @@ const Homeproduct =
         image: product9,
         cat: 'phone',
         type: 'top',
+        taste: "electronic devices"
     },
     {
         id: 10,
@@ -93,6 +107,7 @@ const Homeproduct =
         image: product10,
         cat: 'speaker',
         type: 'top',
+        taste: "electronic devices"
     },
     {
         id: 11,
@@ -101,6 +116,7 @@ const Homeproduct =
         image: product11,
         cat: 'speaker',
         type: 'top',
+        taste: "electronic devices"
     },
     {
         id: 12,
@@ -109,6 +125,43 @@ const Homeproduct =
         image: product12,
         cat: 'speaker',
         type: 'top',
+        taste: "electronic devices"
+    },
+    {
+        id: 13,
+        Name: 'product13',
+        price: '26',
+        image: product13,
+        cat: 'tv',
+        type: 'featured',
+        taste: "clothes"
+    },
+    {
+        id: 14,
+        Name: 'product14',
+        price: '26',
+        image: product14,
+        cat: 'tv',
+        type: 'new',
+        taste: "clothes"
+    },
+    {
+        id: 15,
+        Name: 'product15',
+        price: '26',
+        image: product15,
+        cat: 'tv',
+        type: 'new',
+        taste: "clothes"
+    },
+    {
+        id: 16,
+        Name: 'product16',
+        price: '26',
+        image: product16,
+        cat: 'tv',
+        type: 'featured',
+        taste: "clothes"
     },
 ]
 export default Homeproduct
