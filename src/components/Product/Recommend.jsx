@@ -19,13 +19,13 @@ const Recommend = ({ loadRecomendProduct, setLoadRecomendProduct }) => {
   const filteredProducts = Homeproduct.filter(
     (product) => product.taste === mostFrequentTaste
   );
-  console.log(filteredProducts);
+  // console.log(filteredProducts);
   return (
     <div className="container">
       <div className="box">
-        {/* <div className="header">
-          <h2>New Product</h2>
-        </div> */}
+        <div className="header">
+          <h2>Recommend Product</h2>
+        </div>
         {filteredProducts.map((curElm) => {
           return (
             <div className="productBox">

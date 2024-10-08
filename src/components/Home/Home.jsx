@@ -14,6 +14,7 @@ import Banner3 from "../../image/Multi-Banner-3.webp";
 import Banner4 from "../../image/Multi-banner-4.avif";
 import Banner5 from "../../image/Multi-Banner-5.webp";
 import Recommend from "../Product/Recommend";
+import FeaturedProduct from "../Product/FeaturedProduct";
 
 const Home = () => {
   const [newProduct, setNewProduct] = useState([]);
@@ -35,22 +36,6 @@ const Home = () => {
     setLoadRecomendProduct((prev) => [...prev, productTaste]);
     // console.log(loadRecomendProduct)
   }
-
-  const findMostFrequentTaste = (arr) => {
-    const tasteCount = arr.reduce((acc, taste) => {
-      acc[taste] = (acc[taste] || 0) + 1;
-      return acc;
-    }, {});
-
-    return Object.keys(tasteCount).reduce(
-      (a, b) => (tasteCount[a] > tasteCount[b] ? a : b),
-      ""
-    );
-  };
-  const mostFrequentTaste = findMostFrequentTaste(loadRecomendProduct);
-  const filteredProducts = Homeproduct.filter(
-    (product) => product.taste === mostFrequentTaste
-  );
   //product type
   useEffect(() => {
     productCategory();
@@ -96,13 +81,13 @@ const Home = () => {
                       <div className="img_box">
                         <img src={`${curElm.image}`} alt={curElm.Name} />
                         <div className="icon">
+                          <div className="icon_box">
+                            <FaEye />
+                          </div>
                           <div
                             className="icon_box"
                             onClick={() => recommendProduct(curElm.taste)}
                           >
-                            <FaEye />
-                          </div>
-                          <div className="icon_box">
                             <FaHeart />
                           </div>
                         </div>
@@ -188,44 +173,21 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="product_recommend">
+        {loadRecomendProduct.length > 0 ? (
+          <Recommend
+            loadRecomendProduct={loadRecomendProduct}
+            setLoadRecomendProduct={setLoadRecomendProduct}
+          />
+        ) : (
+          ""
+        )}
+      </div>
       <div className="product_type">
-        {/* <div className="container">
-          <div className="box">
-            <div className="header">
-              <h2>New Product</h2>
-            </div>
-            <div className="productBox">
-              {newProduct.map((curElm) => {
-                return (
-                  <div className="productBox">
-                    <div className="img-box">
-                      <img src={curElm.image} alt="" />
-                    </div>
-                    <div className="detail">
-                      <h3>{curElm.Name}</h3>
-                      <p>${curElm.price}</p>
-                      <div className="icon">
-                        <button>
-                          <FaEye />
-                        </button>
-                        <button>
-                          <FaHeart />
-                        </button>
-                        <button>
-                          <FaShoppingCart />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div> */}
-        <Recommend
-           loadRecomendProduct={loadRecomendProduct}
-           setLoadRecomendProduct={setLoadRecomendProduct}
-
+        <FeaturedProduct
+          newProduct={newProduct}
+          setNewProduct={setNewProduct}
+          Homeproduct={Homeproduct}
         />
       </div>
     </div>
