@@ -62,7 +62,7 @@ const FeaturedProduct = ({Homeproduct}) => {
       </div>
       <div className="box">
         <div className="header">
-          <h2>New Product</h2>
+          <h2>Featured Product</h2>
         </div>
         {featuredProduct.map((curElm) => {
           return (
@@ -91,7 +91,7 @@ const FeaturedProduct = ({Homeproduct}) => {
       </div>
       <div className="box">
         <div className="header">
-          <h2>New Product</h2>
+          <h2>Top Product</h2>
         </div>
         {topProduct.map((curElm) => {
           return (
